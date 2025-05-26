@@ -12,6 +12,11 @@
 ## Description
 PhenoSeeker - A Python toolkit for phenotype-based molecule discovery using Cell Painting data.
 
+## Code Availability
+
+The PhenoSeeker codebase will be publicly released soon!  
+
+
 
 
 ## Installation
@@ -19,7 +24,7 @@ PhenoSeeker - A Python toolkit for phenotype-based molecule discovery using Cell
 1. **Clone the Repository**  
    Clone the PhenoSeeker repository to your local machine:
    ```bash
-   git clone https://github.com/mxfly14/phenoseeker.git
+   git clone https://github.com/mxfly14/2025_sanchez_phenoseeker.git
    cd phenoseeker
 
 2. **Set Up a Virtual Environment**  
