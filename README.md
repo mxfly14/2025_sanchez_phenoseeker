@@ -11,7 +11,7 @@
 
 ## Description
 PhenoSeeker - A Python toolkit for phenotype-based molecule discovery using Cell Painting data.
-
+You can test the method directly -> https://www.phenoseeker.bio.ens.psl.eu/ 
 ## Code Availability
 
 The PhenoSeeker codebase will be publicly released soon!  
