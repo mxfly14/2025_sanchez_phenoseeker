@@ -1,0 +1,24 @@
+parquet_path: '<path_to_input_parquet>'  # path to input parquet file with image paths and metadata
+output_folder : '<path_to_output_folder>' # where to save extracted features and metadata
+
+# Compute
+gpu_id: 0 # GPU id to use, set to -1 for CPU
+num_workers: 32
+batch_size: 128    
+
+# Columns names in the input parquet
+metadata_cols:
+  - Metadata_Source
+  - Metadata_Batch
+  - Metadata_Plate
+  - Metadata_Well
+  - Metadata_Site
+
+images_cols:
+  - FileName_OrigAGP
+  - FileName_OrigDNA
+  - FileName_OrigER
+  - FileName_OrigMito
+  - FileName_OrigRNA
+
+model_family: "dinov2"

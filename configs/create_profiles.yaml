@@ -1,0 +1,30 @@
+# Path configuration (relative paths are resolved from this file's directory)
+metadata_path: ../data/metadata.parquet
+embeddings_path: ../data/image_embeddings.npy
+well_output_dir: ../outputs/well_profiles
+compound_output_dir: ../outputs/compound_profiles
+
+# Embedding names and pipeline configuration
+starting_embedding_name: Embeddings_Raw
+
+sphering:
+  method: ZCA
+  norm_embeddings: true
+  use_control: true
+  n_jobs: -1
+  new_embeddings_name: Embeddings_ZCA_C
+
+inverse_normal_transform:
+  n_jobs: -1
+  new_embeddings_name: Embeddings_ZCA_C_Int
+
+# Aggregation strategy
+well_aggregation: mean
+well_group_n_jobs: -1
+
+compound_aggregation: mean
+compound_group_n_jobs: -1
+compound_cols_to_keep:
+  - Metadata_JCP2022
+  - Metadata_InChI
+  - Metadata_Is_dmso
