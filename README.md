@@ -117,6 +117,14 @@ python scripts/explore_lit_PCBA.py \
 
 Optional flags allow tuning the fingerprint radius and size. Each subfolder produces a `jump_<folder>.parquet` file with the assigned `closest_jcp` identifier and the associated Tanimoto score.
 
+After you collect the generated `jump_<target>.parquet` files, prepare them for downstream use with `scripts/prepare_csv_lit_pcba.py`. Adjust `SRC_DIR` and `DST_DIR` at the top of that script so they point to `<path_to_lit_pcba_parquets>` and `<path_to_output_csvs>` rather than the hard-coded `/projects/...` values, then run:
+
+```bash
+python scripts/prepare_csv_lit_pcba.py
+```
+
+The script keeps only rows where `tanimoto_similarity == 1`, renames the `smiles`, `closest_jcp`, and `Active` columns into `Metadata_Smiles`, `Metadata_JCP2022`, and `role_val` (mapping `True` → `hit`), and writes `<target>.csv` files for folders with at least 50 molecules including five hits.
+
 ## Documentation
 
 - `docs/embedding_manager.md` — deep dive into loading, filtering, normalising, and aggregating embeddings with practical recipes and naming conventions.
