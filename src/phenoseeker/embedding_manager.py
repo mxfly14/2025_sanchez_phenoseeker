@@ -69,8 +69,6 @@ class EmbeddingManager:
                 "df should be either a pandas DataFrame or a Path to a CSV/Parquet file."  # Noqa
             )
 
-        #    self.df = self.df.sample(frac=1, ignore_index=True)
-        #    Shuffle the DataFrame TODO: remove it
         self.entity = entity
 
         self.JCP_ID_poscon = [

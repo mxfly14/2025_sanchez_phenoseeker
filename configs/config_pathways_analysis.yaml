@@ -1,0 +1,4 @@
+base_path: "<base_path_to_data_folder>"
+enrichment_factor_percentage: 5
+output_folder: "<output_path_to_results_folder>"
+metadata_parquet: "<path_to_metadata_parquet_file_with_embeddings>"

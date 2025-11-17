@@ -2,21 +2,16 @@ import numpy as np
 import pandas as pd
 import os
 
-# import random
 import logging
 import yaml
 
-# Core libraries
 from pathlib import Path
 from tqdm import tqdm
 
-# Machine learning & statistics
 from sklearn.metrics.pairwise import cosine_similarity
 import scipy.stats as stats
 
 import matplotlib.pyplot as plt
-
-# from joblib import Parallel, delayed
 import glob
 
 # Configure logging
@@ -201,7 +196,7 @@ def analyze_groups(group_a, group_b):
     return results
 
 
-def process_json_file(json_path, df_phenom, new_df, n_percent, output_folder):
+def process_json_file(json_path, df_metadata, new_df, n_percent, output_folder):
     logging.info(f"Processing JSON file: {json_path}")
     gsea_data = pd.read_json(json_path)
     genes_list = gsea_data.transpose()["geneSymbols"].iloc[0]
@@ -215,7 +210,7 @@ def process_json_file(json_path, df_phenom, new_df, n_percent, output_folder):
     ]
 
     df_final = filtered_df.drop_duplicates().merge(
-        df_phenom, left_on="Ligand InChI", right_on="Metadata_InChI"
+        df_metadata, left_on="Ligand InChI", right_on="Metadata_InChI"
     )
 
     if df_final.empty:
@@ -223,13 +218,13 @@ def process_json_file(json_path, df_phenom, new_df, n_percent, output_folder):
         return None
 
     inchi_list = df_final["Metadata_InChI"].to_list()
-    df_phenom["Metadata_Bioactivity"] = df_phenom["Metadata_InChI"].apply(
+    df_metadata["Metadata_Bioactivity"] = df_metadata["Metadata_InChI"].apply(
         lambda x: "hit" if x in inchi_list else "nan"
     )
-    df_phenom_test = sample_df(df_phenom)
+    df_metadata_test = sample_df(df_metadata)
 
     group_a = (
-        df_phenom_test[df_phenom_test["Metadata_Bioactivity"] == "hit"][
+        df_metadata_test[df_metadata_test["Metadata_Bioactivity"] == "hit"][
             "Embeddings_mean"
         ]
         .apply(lambda x: np.array(x, dtype=np.float32))
@@ -237,7 +232,7 @@ def process_json_file(json_path, df_phenom, new_df, n_percent, output_folder):
     )
 
     group_b = (
-        df_phenom_test[df_phenom_test["Metadata_Bioactivity"] == "nan"][
+        df_metadata_test[df_metadata_test["Metadata_Bioactivity"] == "nan"][
             "Embeddings_mean"
         ]
         .apply(lambda x: np.array(x, dtype=np.float32))
@@ -291,12 +286,12 @@ def process_json_file(json_path, df_phenom, new_df, n_percent, output_folder):
     }
 
 
-def process_all_jsons(json_paths, df_phenom, new_df, n_percent, output_folder):
+def process_all_jsons(json_paths, df_metadata, new_df, n_percent, output_folder):
     logging.info("Starting to process all JSON files.")
     results = []
     for json_path in tqdm(json_paths, desc="Processing JSON files"):
         result = process_json_file(
-            json_path, df_phenom, new_df, n_percent, output_folder
+            json_path, df_metadata, new_df, n_percent, output_folder
         )
         if result is not None:
             results.append(result)
@@ -310,14 +305,14 @@ def save_results_to_csv(results_df, output_path):
 
 
 def main():
-    config = load_config("config.yaml")
+    config = load_config("../config/config_pathways_analysis.yaml")
 
     base_path = Path(config["base_path"])
     n_percent = config["enrichment_factor_percentage"]
     output_folder = Path(config["output_folder"])
     output_folder.mkdir(parents=True, exist_ok=True)
 
-    binding_db_path = base_path / Path("BindingDB_All_202412_tsv(1).zip")
+    binding_db_path = base_path / Path("BindingDB_All_202412_tsv.zip")
     df_bd = pd.read_csv(
         binding_db_path, sep="\t", on_bad_lines="skip", low_memory=False
     )
@@ -326,8 +321,8 @@ def main():
     paths_to_jsons = glob.glob(str(base_path / "gsea/*.json"))
     logging.info(f"Found {len(paths_to_jsons)} JSON files for processing.")
 
-    df_phenom = pd.read_parquet(
-        "/projects/synsight/data/openphenom/norm_2_compounds_embeddings.parquet"
+    df_metadata = pd.read_parquet(
+        config["metadata_parquet"]
     )
     logging.info("Loaded phenotypic embeddings.")
 
@@ -353,7 +348,7 @@ def main():
 
     results_df = process_all_jsons(
         paths_to_jsons,
-        df_phenom,
+        df_metadata,
         new_df,
         n_percent,
         output_folder,

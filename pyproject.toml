@@ -29,6 +29,8 @@ umap-learn = "^0.5.9.post2"
 rdkit = "^2025.9.1"
 pingouin = "^0.5.5"
 datasketch = "^1.7.0"
+plotly = "^6.4.0"
+pyarrow = "^22.0.0"
 
 
 
