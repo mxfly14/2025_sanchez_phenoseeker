@@ -5,7 +5,6 @@
 [![python](https://img.shields.io/badge/-Python_3.11+-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![pytorch](https://img.shields.io/badge/PyTorch_2.9-ee4c2c?logo=pytorch&logoColor=white)](https://pytorch.org/get-started/locally/)
 [![preprint](https://img.shields.io/badge/preprint-bioRxiv-red)](https://www.biorxiv.org/content/10.1101/2025.05.16.654292v1.full.pdf)
-[![docs](https://img.shields.io/badge/docs-EmbeddingManager-blue)](docs/embedding_manager.md)
 [![license](https://img.shields.io/badge/License-CC_BY--NC_4.0-lightgrey)](https://creativecommons.org/licenses/by-nc/4.0/)
 
 </div>
@@ -114,4 +113,4 @@ This project is distributed under Creative Commons Attribution-NonCommercial 4.0
 
 ## Acknowledgments
 
-If you use PhenoSeeker in academic work, please cite the preprint above and consider linking back to this repository. Contributions that respect the non-commercial license are welcome.
+If you use PhenoSeeker in academic work, please cite the preprint above and consider linking back to this repository. Contributions are welcome.
