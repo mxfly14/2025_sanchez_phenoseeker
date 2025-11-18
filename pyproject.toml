@@ -31,6 +31,7 @@ pingouin = "^0.5.5"
 datasketch = "^1.7.0"
 plotly = "^6.4.0"
 pyarrow = "^22.0.0"
+ipykernel = "^7.1.0"
 
 
 
