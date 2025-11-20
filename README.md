@@ -17,8 +17,8 @@ PhenoSeeker is a Python toolkit for phenotype-based molecule discovery using Cel
 
 ## Publication & Citation
 
-- Preprint: ["Large Scale Cell Painting Guided Compound Selection Reveals Activity Cliffs and Functional Relationships"](https://www.biorxiv.org/content/10.1101/2025.05.16.654292v1.full.pdf).
-- Citation: Sanchez, M., Bourriez, N., Bendidi, I., Cohen, E., Svatko, I., Del Nery, E., Tajmouati, H., Bollot, G., Calzone, L., & Genovesio, A. (2025). *Large Scale Cell Painting Guided Compound Selection Reveals Activity Cliffs and Functional Relationships*. bioRxiv. https://doi.org/10.1101/2025.05.16.654292
+- Preprint: ["Large Scale Compound Selection Guided by Cell Painting Reveals Activity Cliffs and Functional Relationships"](https://www.biorxiv.org/content/10.1101/2025.05.16.654292v1.full.pdf).
+- Citation: Sanchez, M., Bourriez, N., Bendidi, I., Cohen, E., Svatko, I., Del Nery, E., Tajmouati, H., Bollot, G., Calzone, L., & Genovesio, A. (2025). *Large Scale Compound Selection Guided by Cell Painting Reveals Activity Cliffs and Functional Relationships*. bioRxiv. https://doi.org/10.1101/2025.05.16.654292
 
 ## Repository Contents
 
