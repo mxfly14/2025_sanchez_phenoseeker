@@ -2,7 +2,7 @@
 
 # PhenoSeeker
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8475.svg)](https://doi.org/10.5281/zenodo.8475)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8475.svg)](https://doi.org/10.5281/zenodo.17914525)
 [![python](https://img.shields.io/badge/-Python_3.11+-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![pytorch](https://img.shields.io/badge/PyTorch_2.9-ee4c2c?logo=pytorch&logoColor=white)](https://pytorch.org/get-started/locally/)
 [![preprint](https://img.shields.io/badge/preprint-bioRxiv-red)](https://www.biorxiv.org/content/10.1101/2025.05.16.654292v1.full.pdf)
@@ -17,7 +17,7 @@ PhenoSeeker is a Python toolkit for phenotype-based molecule discovery using Cel
 
 ## Publication & Citation
 
-- Preprint: ["Large Scale Compound Selection Guided by Cell Painting Reveals Activity Cliffs and Functional Relationships"](https://www.biorxiv.org/content/10.1101/2025.05.16.654292v1.full.pdf).
+- Preprint: ["Large Scale Cell Painting Guided Compound Selection Reveals Activity Cliffs and Functional Relationships"](https://www.biorxiv.org/content/10.1101/2025.05.16.654292v1.full.pdf).
 - Citation: Sanchez, M., Bourriez, N., Bendidi, I., Cohen, E., Svatko, I., Del Nery, E., Tajmouati, H., Bollot, G., Calzone, L., & Genovesio, A. (2025). *Large Scale Compound Selection Guided by Cell Painting Reveals Activity Cliffs and Functional Relationships*. bioRxiv. https://doi.org/10.1101/2025.05.16.654292
 
 ## Repository Contents
