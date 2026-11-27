@@ -4,7 +4,7 @@
 
 [![python](https://img.shields.io/badge/-Python_3.11+-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![pytorch](https://img.shields.io/badge/PyTorch_2.9-ee4c2c?logo=pytorch&logoColor=white)](https://pytorch.org/get-started/locally/)
-[![preprint](https://img.shields.io/badge/preprint-bioRxiv-red)](https://www.biorxiv.org/content/10.1101/2025.05.16.654292v1.full.pdf)
+[![publication](https://img.shields.io/badge/Publication-Communications_Biology-blue)](https://doi.org/10.1038/s42003-025-09500-y)
 [![license](https://img.shields.io/badge/License-CC_BY--NC_4.0-lightgrey)](https://creativecommons.org/licenses/by-nc/4.0/)
 
 </div>
@@ -17,8 +17,8 @@ PhenoSeeker is a Python toolkit for phenotype-based molecule discovery using Cel
 
 ## Publication & Citation
 
-- Preprint: ["Large Scale Compound Selection Guided by Cell Painting Reveals Activity Cliffs and Functional Relationships"](https://www.biorxiv.org/content/10.1101/2025.05.16.654292v1.full.pdf).
-- Citation: Sanchez, M., Bourriez, N., Bendidi, I., Cohen, E., Svatko, I., Del Nery, E., Tajmouati, H., Bollot, G., Calzone, L., & Genovesio, A. (2025). *Large Scale Compound Selection Guided by Cell Painting Reveals Activity Cliffs and Functional Relationships*. bioRxiv. https://doi.org/10.1101/2025.05.16.654292
+- Published article: ["Large scale compound selection guided by cell painting reveals activity cliffs and functional relationships"](https://doi.org/10.1038/s42003-025-09500-y), *Communications Biology* 9, 225 (2026).
+- Citation: Sanchez, M., Bourriez, N., Bendidi, I., Cohen, E., Svatko, I., Del Nery, E., Tajmouati, H., Bollot, G., Calzone, L., & Genovesio, A. (2026). *Large scale compound selection guided by cell painting reveals activity cliffs and functional relationships*. *Communications Biology*, 9, 225. https://doi.org/10.1038/s42003-025-09500-y
 
 ## Repository Contents
 
@@ -113,4 +113,4 @@ This project is distributed under Creative Commons Attribution-NonCommercial 4.0
 
 ## Acknowledgments
 
-If you use PhenoSeeker in academic work, please cite the preprint above and consider linking back to this repository. Contributions are welcome.
+If you use PhenoSeeker in academic work, please cite the published article above and consider linking back to this repository. Contributions are welcome.
