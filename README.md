@@ -2,11 +2,11 @@
 
 # PhenoSeeker
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8475.svg)](https://doi.org/10.5281/zenodo.17914525)
 [![python](https://img.shields.io/badge/-Python_3.11+-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![pytorch](https://img.shields.io/badge/PyTorch_2.9-ee4c2c?logo=pytorch&logoColor=white)](https://pytorch.org/get-started/locally/)
 [![publication](https://img.shields.io/badge/Publication-Communications_Biology-blue)](https://doi.org/10.1038/s42003-025-09500-y)
 [![license](https://img.shields.io/badge/License-CC_BY--NC_4.0-lightgrey)](https://creativecommons.org/licenses/by-nc/4.0/)
-
 </div>
 
 > Non-commercial use only. This repository is licensed under CC BY-NC 4.0.
